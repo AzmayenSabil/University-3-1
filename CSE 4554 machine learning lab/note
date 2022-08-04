@@ -1,0 +1,27 @@
+'in terminal nmtui >> dsl >> edit a connection >> username, pass >> activate the connection'
+
+>> google colab (colaboratory) and kaggle -> how to use these two with python in ml
+>> basics of python -> through a python crash course
+
+# data collection, data set prep
+# preprocessing of datasets
+# implementation of algorithms on the dataset
+# evaluation 
+
+
+team: barshat, sabil, yeaken
+
+home assignment:
+# how to use google colab for machine learning (interactive python)
+# how to add google drive with colab
+# upload files in google drive
+# how to execute interactive python 
+# how to install jupyter notebook in my machine to run python 
+# how numpy array works
+# how panda works
+# how to handle dataframes
+# how to solve linear equations of linear algebra using python
+# matrix manipulation, dataset representation using pandas
+# how to do different matrix operations using python
+ 
+
