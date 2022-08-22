@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hello");
+        Context context = new Context(new ChrismasDiscount(), 20);
+        context.giveDiscount();
     }
 }
