@@ -1,0 +1,14 @@
+so for this project we will be using react for frontend, node and express for the backend and use mongodb for our database.
+
+for our source control we will be using github and jest for unit testing
+
+this is our projected timeline. In first 3 weeks we have already given our time in generating idea and planning.
+
+from week three to week 5 we will gather all the requirements for our project. next 8 weeks we will work on the development of the project and simulteniously we will do the unit testing.
+
+after that iwe will coneduct ntegration and integration testing. in our last week we hope that we will be ready for deployment.
+
+
+the challanges that we have anticipated for this project are collecting data. as there is no good database available as per our requirements. integrating with maps and syncing with patient queue can also be a challange.
+
+why this project has great oppurtunities? every one of us has to go to doctor at some point of our life. so if we can deploy this project successfully we can capture a large market.
