@@ -1,0 +1,25 @@
+An operating system is a program that manages the computer hardware. It also provides a basis for application programs and acts as an intermediary between the computer user and the computer hardware.
+
+users -> application -> OS -> hardware
+OS: ease of use, resource allocator, control program
+
+OS also known as KERNEL 
+System programs and application programs
+
+general purpose system: 1 or more CPU, device controller, memory
+
+bootstrap program/firmware initiates OS. stored in ROM or EEPROM
+
+Interrupts are an important part of a computer architecture. Each computer design has its own interrupt mechanism, but several functions are common. The interrupt must transfer control to the appropriate interrupt service routine. The straightforward method for handling this transfer would be to invoke a generic routine to examine the interrupt information; the routine, in turn, would call the interrupt-specific handler.
+
+
+CPU loads instructions from memory
+volatile -> loses contents when power is off.
+
+asymmetric multiprocessing 
+symmetric multiprocessing 
+
+UMA -> uniform memory access
+NUMA -> non uniform memory access
+
+user mode, kernel mode (mode bit 0,1)
