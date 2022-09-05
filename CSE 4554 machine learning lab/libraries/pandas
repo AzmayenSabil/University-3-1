@@ -1,0 +1,29 @@
+>> import pandas as pd
+
+#to load data from csv
+df = pd.read_csv(path)
+     pd.read_excel()
+
+df.head(number_of_rows)
+df.tail(---)
+
+***delimiter***
+
+df.columns <-- column names
+
+df[['column name','--','--']]  <- to read column/s
+
+df.iloc[start:finish]  <-to read rows
+or
+for index, row in df.iterrows()
+	print(index, row)
+
+df.loc[df[colum.name]=='something']  will give us everything that satisfies the condition
+
+df.describe()  <-- gives back a lot of stats on the dataframe
+
+df.sort_values('column_name', ascending=false/true)
+
+df.drop(columns=[''])
+
+we can : groupby, count, sum, mean, sort ....

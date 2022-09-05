@@ -1,0 +1,74 @@
+>> import numpy as np
+
+arr = np.array([1,2,3], np.int32)   <- to create an array
+
+([]) 1D
+([[],...,[]]) 2D
+
+arr.shape
+arr.dtype
+arr.size
+
+np.array({a,b,c}).  <- object array
+
+zeroes = np.zeroes((rows,cols))
+
+arng = np.arrange(x)
+0,1,2,.....x
+
+lspace = np.linspace(a,b,c)
+this gives us a list of equally distributed numbers from a to b and c number of elements
+
+arr_like = np.empty_like(arr) <- same size array like arr
+
+identity = np.identity(5)
+identity matrix of 5 X 5
+
+arr.reshape(a,b)
+a is row and b is col
+and reshape method reshapes an array (arr) with a and b. the number of elements have to match. 
+arr = 100
+arr_reshape = (a=5,b=20)
+
+
+arr.ravel  <- makes something from any D to 1D
+
+
+axis----
+[1,2,3,4] axis=0
+[[],[]] axis=0,1
+
+if we make 2d array a matrix
+from up to down is axis 0 
+from left to right is axis 1
+
+arr.sum(axis=0)
+
+--------
+
+
+arr.T   <- transpose
+arr.flat   <- iterate row wise
+
+arr.argsort() <- give indexes in ascending order
+
+arr.argmin()
+arr.argmax()
+
+arr.sum()
+arr.min()
+arr.max()
+
+np.where(arr with condition)
+np.count_nonzero(arr)
+
+
+
+
+
+
+
+
+
+
+
