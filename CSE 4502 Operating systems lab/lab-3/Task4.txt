@@ -1,0 +1,6 @@
+The given Task is to Sort given numbers in Child Process and then search a number from Parent Process.
+
+If I create an array in parent process and then sort them in the child process they will be sorted in the scope of child process. Meaning they will be sorted in child process but the array will remain unsorted in the Parent Process. The same is true vice versa.
+So finding a number will not be possible using binary search as the array remain unsorted.
+
+In short, the parent and child processes have their own copies of the data. So the given task cannot be done.
