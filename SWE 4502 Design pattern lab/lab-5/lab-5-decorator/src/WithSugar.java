@@ -1,18 +1,16 @@
 public class WithSugar extends CoffeeDecorator {
 
-    Coffee coffee;
-
     public WithSugar(Coffee coffee) {
-        this.coffee = coffee;
+        super(coffee);
     }
 
     @Override
     public String getDescription() {
-        return coffee.getDescription() + ", Sugar";
+        return newCoffee.getDescription() + ", with Sugar";
     }
 
     @Override
     public double cost() {
-        return coffee.cost() + .25;
+        return newCoffee.cost() + .25;
     }
 }

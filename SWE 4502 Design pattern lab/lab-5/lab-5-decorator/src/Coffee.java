@@ -1,11 +1,6 @@
-public abstract class Coffee {
+public interface Coffee {
 
-    String description = "Unknown Coffee";
-
-    public String getDescription() {
-        return description;
-    }
-
-    public abstract double cost();
+    public String getDescription();
+    public double cost();
 }
 

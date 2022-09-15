@@ -1,12 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Coffee espresso = new Espresso();
 
-        espresso = new WithMilk(espresso);
-        espresso = new WithSugar(espresso);
-        espresso = new WithSugar(espresso);
+        Coffee specialEspresso = new WithMilk(new WithMilk(new Espresso()));
 
-        printCoffee(espresso);
+        printCoffee(specialEspresso);
     }
 
     private static void printCoffee(Coffee c) {

@@ -1,18 +1,16 @@
 public class WithMilk extends CoffeeDecorator {
 
-    Coffee coffee;
-
     public WithMilk(Coffee coffee) {
-        this.coffee = coffee;
+        super(coffee);
     }
 
     @Override
     public String getDescription() {
-        return coffee.getDescription() + ", Milk";
+        return newCoffee.getDescription() + ", with Milk ";
     }
 
     @Override
     public double cost() {
-        return coffee.cost() + .50;
+        return newCoffee.cost() + .50;
     }
 }

@@ -1,7 +1,8 @@
-public class Espresso extends Coffee {
+public class Espresso implements Coffee {
 
-    public Espresso() {
-        description = "Espresso";
+    @Override
+    public String getDescription() {
+        return "espresso";
     }
 
     @Override
