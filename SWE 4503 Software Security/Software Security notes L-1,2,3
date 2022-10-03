@@ -1,0 +1,101 @@
+Software Security
+
+
+A Malware is a set of instructions that run on your computer and make your system do something that an attacker wants it to do.
+
+ Payload
+• The action that a threat performs, apart from its main behaviour.
+
+Security is concerned with preventing undesired behavior.
+
+Confidentiality
+• Data confidentiality: Assures that confidential information is not disclosed to
+unauthorized individuals
+• Privacy: Assures that individual control or influence what information may be collected and stored
+
+Integrity
+• Data integrity: assures that information and programs are changed only in a
+specified and authorized manner
+• System integrity: Assures that a system performs its operations in unimpaired manner
+
+Availability
+assure that systems works promptly and service is not denied to authorized users
+
+Authenticity: 
+the property of being genuine and being able to be verified and trusted; confident in the validity of a transmission, or a message, or its originator
+
+Accountability: 
+generates the requirement for actions of an entity to be traced uniquely to that individual to support nonrepudiation, deference, fault isolation, etc
+
+• Asset –
+(System Resource) – anything that has value to an
+individual, an organization or a government
+
+• Access - 
+a subject or object’s ability to use, manipulate,
+modify, or affect another subject or object.
+
+• Vulnerability – 
+weakness of an asset or control that can be exploited by a threat
+• Flaw or weakness in a system's design, implementation, or operation and management that could be exploited to violate the system's security policy.
+• Categories of vulnerabilities
+• Corrupted (loss of integrity)
+• Leaky (loss of confidentiality)
+• Unavailable or very slow (loss of availability)
+
+
+• Threat – : 
+potential cause of an unwanted incident, which may result in
+harm to a system, individual or organization
+
+
+• Attack - 
+an act that is an intentional or unintentional attempt to cause damage or compromise to the information and/or the systems that support it.
+• Categories of Attacks
+• Passive – attempt to learn or make use of information from the system that does not
+affect system resources
+• Active – attempt to alter system resources or affect their operation
+• Insider – initiated by an entity inside the security perimeter
+• Outsider – initiated from outside the perimeter
+ 
+
+•Risk - 
+An expectation of loss expressed as the probability that a particular threat will exploit a particular vulnerability with a particular harmful result.
+ 
+
+•Cyber-Physical Systems (CPS): 
+are systems composed of physical systems (hardware), software systems and potentially other types of systems (e.g., human systems). 
+These are closely integrated and networked to deliver some global behaviour.
+ 
+
+
+Software security is a kind of computer security that focuses on the secure design and implementation of software.
+• Using the best language, tools, methods
+
+
+Network security:
+•Protection of the underlying networking infrastructure from unauthorized access and misuse.
+ 
+
+Application security
+•aims to protect Software code, Software and hardware system, Data against cyber threats.
+• introduce a secure software development life cycle to development teams.
+ 
+
+Web Security
+• Process, technology or method for protecting
+• Web servers, web applications, and web services against different security threats that exploit vulnerabilities in an application’s code.
+• Critical to the business continuity
+
+
+Information security
+• Protecting information and information systems from unauthorized use, assess, modification or removal.
+
+
+Cybersecurity = security of information systems, applications and networks in the face of attacks, 
+accidents and failures with the goal of protecting operations and assets
+
+
+
+
+
