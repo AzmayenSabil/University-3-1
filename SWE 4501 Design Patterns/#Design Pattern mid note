@@ -1,0 +1,56 @@
+#Design Pattern
+
+Behavioral
+
+1. Template pattern
+>> an abstract class of all the methods that is common to other classes. In the abstract class there will be a templateMethod that will call all other methods. Other classes extend 
+the template class and implement those methods based on their needs.
+
+2. Strategy Pattern
+>> maintains Open closed principle and Single responsibility principle
+an interface class with the method that is implemented by different class. like payment method is implemented by payment with card, payment with paypal etc. 
+
+3. State Pattern
+>> finite-state-machine
+it helps to transfer states between objects. 
+
+4. Mediator
+>>
+
+Creational
+
+1. Factory
+>> 
+
+2. Abstract Factory
+>>
+
+3. Singleton
+>> only one instance and provides a global access to that only instance.
+private constructor. already created an instance of that class. just use getInstance().
+
+4. Prototype
+>> This pattern involves implementing a prototype interface which tells to create a clone of the current object.
+
+
+Structural
+
+1. Adapter
+>>
+
+2. Decorator
+>>
+
+3. Observer
+>> The Observer Pattern provides an object design where subjects and observers are loosely coupled. subject, observer, client. 
+Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its dependent objects are to be notified automatically
+
+
+
+
+
+
+
+
+
+
