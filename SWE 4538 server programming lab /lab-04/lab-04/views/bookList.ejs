@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <table>
+    <tr>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>ID</td>
+        <th>Delete</td>
+        <th>Update</td>
+    </tr>
+
+
+    <%for(let i=0; i<books.length; i++){%>
+        <tr>
+            <td><%=books[i].name%></td>
+            <td><%=books[i].author%></td>
+            <td><%=books[i].genre%></td>
+            <td><%=books[i].id%></td>
+            <td>
+                <a href="http://localhost:3000/book-list/deleteBook/<%=books[i].id%>">
+                  <div style="height:100%;width:100%">
+                    Delete
+                  </div>
+                </a>
+            </td>
+            <td>
+                <a href="http://localhost:3000/book-list/updateBook/<%=books[i].id%>">
+                  <div style="height:100%;width:100%">
+                    Update
+                  </div>
+                </a>
+            </td>
+        </tr>
+    <%}%>
+</table>
+
+  </body>
+</html>
