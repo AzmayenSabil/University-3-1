@@ -1,0 +1,45 @@
+Disease:
+
+name > Neurological disorder
+specialty >Neurology
+symptoms > headache, stroke, seizure
+
+name > Allergy
+specialty > allergy
+symptoms > sneezing, watery eyes, itchy rash
+
+name > malaria
+specialty > Medicine
+symptoms > headache, fever, muscle aches, vomiting, diarrhoea 
+
+name > meningitis
+specialty > medicine
+symptoms > headache, fever, join aches, vomiting, seizure
+
+
+Doctors:
+
+Doctor Abir > Medicine
+Azmayen Fayek Sabil > Allergy
+The great gatsby > Medicine
+
+
+doctor:
+sabil1@email.com
+12345678
+
+
+
+
+script:
+
+page09: this is the ERD diagram of our project. Here the coloured ones are done and implemented but the white coloured ones are yet to be implemented.
+
+page10: After figuring out the use case scenario and designing the ERD diagram we tried to design a mockup of our frontend. And this is the result of that
+ 
+page11: And we also tried to collaborate through a project management tool. And we are using JIRA for that.
+
+NOW we will be demonstrating our project
+
+
+
