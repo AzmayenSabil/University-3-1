@@ -2,12 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee implements Container{
-    private String name;
-    private String dept;
-    private int salary;
-    private List<Employee> subordinates;
+    String name;
+    String dept;
+    int salary;
+    List<Employee> subordinates;
 
-    // constructor
     public Employee(String name,String dept, int sal) {
         this.name = name;
         this.dept = dept;
@@ -31,27 +30,8 @@ public class Employee implements Container{
         return ("Employee :[ Name : " + name + ", dept : " + dept + ", salary :" + salary+" ]");
     }
 
-    private class EmployeeIterator implements Iterator{
-        int index;
-        @Override
-        public boolean hasNext() {
-            if(index < subordinates.size()){
-                return true;
-            }
-            return false;
-        }
-
-        @Override
-        public Object next() {
-            if(this.hasNext()){
-                return subordinates.get(index++);
-            }
-            return null;
-        }
-    }
-
     @Override
     public Iterator getIterator() {
-        return new EmployeeIterator();
+        return new EmployeeIterator(subordinates);
     }
 }

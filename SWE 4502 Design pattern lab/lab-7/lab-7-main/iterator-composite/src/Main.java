@@ -1,27 +1,29 @@
 public class Main {
     public static void main(String[] args) {
-        Employee CEO = new Employee("John","CEO", 30000);
-
-        Employee headSales = new Employee("Robert","Head Sales", 20000);
-
-        Employee headMarketing = new Employee("Michel","Head Marketing", 20000);
-
-//        Employee clerk1 = new Employee("Laura","Marketing", 10000);
-//        Employee clerk2 = new Employee("Bob","Marketing", 10000);
-//
-//        Employee salesExecutive1 = new Employee("Richard","Sales", 10000);
-//        Employee salesExecutive2 = new Employee("Rob","Sales", 10000);
+        Employee CEO = new Employee("Muti","CEO", 150000);
+        Employee headSales = new Employee("raiyan","Head Sales", 70000);
+        Employee headMarketing = new Employee("Mehesum","Head Marketing", 50000);
+        Employee salesPerson = new Employee("Rifat","Marketing", 25000);
 
         CEO.add(headSales);
         CEO.add(headMarketing);
+        CEO.add(salesPerson);
 
-//        headSales.add(salesExecutive1);
-//        headSales.add(salesExecutive2);
-//
-//        headMarketing.add(clerk1);
-//        headMarketing.add(clerk2);
+        Employee GM = new Employee("sabil","marketing", 150000);
+        Employee AGM = new Employee("Abir","marketing", 70000);
+        Employee DGM = new Employee("Tali","Head Marketing", 50000);
+
+        GM.add(AGM);
+        GM.add(DGM);
+
 
         for(Iterator iter = CEO.getIterator(); iter.hasNext();){
+            System.out.println(iter.next().toString());
+        }
+
+        System.out.println();
+
+        for(Iterator iter = GM.getIterator(); iter.hasNext();){
             System.out.println(iter.next().toString());
         }
     }
