@@ -1,7 +1,9 @@
 public class QuackCounterFactory extends DuckUtilsFactory{
-    public QuackCounter getCounterFactory(String counterFactory, QuackBehaviour duck){
+    public QuackBehaviour getCounterFactory(String counterFactory, QuackBehaviour duck){
         if(counterFactory.equalsIgnoreCase("count")){
             return new QuackCounter(duck);
+        }else if(counterFactory.equalsIgnoreCase("countMany")){
+            return new QuackCounterFlock(duck);
         }else{
             return null;
         }
