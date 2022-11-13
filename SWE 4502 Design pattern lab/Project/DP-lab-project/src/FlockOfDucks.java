@@ -48,6 +48,10 @@ public class FlockOfDucks implements QuackBehaviour{
 
     @Override
     public void notifyObservers() {
-
+        Iterator<QuackBehaviour> iterator = ducks.iterator();
+        while (iterator.hasNext()) {
+            QuackBehaviour duck = (QuackBehaviour) iterator.next();
+            duck.notifyObservers();
+        }
     }
 }

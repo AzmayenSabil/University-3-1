@@ -80,12 +80,14 @@ public class DuckSimulatorMain {
                 System.out.println("----- Start of Task-4 -----");
                 // Used factory pattern to create duck and quack counter
                 DuckFactory duckFactory = new DuckFactory();
+                System.out.println("New duck : ");
                 QuackBehaviour duck2 = duckFactory.getFactory("patihash");
 
-                System.out.println("New duck : ");
+
 
                 QuackCounterFactory quackCounterFactory = new QuackCounterFactory();
                 QuackCounter counter2 = (QuackCounter) quackCounterFactory.getCounterFactory("count", duck2);
+                counter2.quack();
                 counter2.quack();
                 counter2.quack();
                 counter2.getNumberOfQuacks();
@@ -132,7 +134,9 @@ public class DuckSimulatorMain {
                 flockOfDucks.registerObserver(duckObserver);
                 //counter3.quack();
                 //counter3.getNumberOfQuacks();
-                flockOfDucks.quack();
+                //flockOfDucks.quack();
+                //duckObserver.notify();
+                flockOfDucks.notifyObservers();
 
                 System.out.println("----- End of Task-6 -----");
                 System.out.println();
