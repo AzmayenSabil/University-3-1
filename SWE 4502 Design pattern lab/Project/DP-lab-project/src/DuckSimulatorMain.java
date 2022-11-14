@@ -53,24 +53,21 @@ public class DuckSimulatorMain {
             else if(input == 3) {
                 System.out.println("----- Start of Task-3 -----");
                 //--------quack counter-------
-                QuackBehaviour patiHash = new PatiHash();
-                QuackCounter quackCounter = new QuackCounter(patiHash);
-                quackCounter.quack();
-                quackCounter.quack();
-                quackCounter.quack();
+                QuackCounter patiQuackCounter = new QuackCounter(new PatiHash());
+                patiQuackCounter.quack();
+                patiQuackCounter.quack();
+                patiQuackCounter.quack();
 
-                quackCounter.getNumberOfQuacks();
+                patiQuackCounter.getNumberOfQuacks();
                 //-----------------------------
 
                 //---------quack counter-------
                 System.out.println();
-                QuackBehaviour duck = new Duck();
-                QuackCounter quackCounter2 = new QuackCounter(duck);
-                quackCounter2.quack();
-                quackCounter2.quack();
-                //quackCounter.quack();
+                QuackCounter duckQuackCounter = new QuackCounter(new Duck());
+                duckQuackCounter.quack();
+                duckQuackCounter.quack();
 
-                quackCounter2.getNumberOfQuacks();
+                duckQuackCounter.getNumberOfQuacks();
                 //-----------------------------
                 System.out.println("----- End of Task-3 -----");
                 System.out.println();
@@ -129,13 +126,8 @@ public class DuckSimulatorMain {
                 flockOfDucks.add(threeduck);
                 flockOfDucks.add(fourduck);
 
-                //QuackCounterFlock counter3 = (QuackCounterFlock) quackCounterFactory.getCounterFactory("countMany", flockOfDucks);
                 DuckObserver duckObserver = new DuckObserver();
                 flockOfDucks.registerObserver(duckObserver);
-                //counter3.quack();
-                //counter3.getNumberOfQuacks();
-                //flockOfDucks.quack();
-                //duckObserver.notify();
                 flockOfDucks.notifyObservers();
 
                 System.out.println("----- End of Task-6 -----");
