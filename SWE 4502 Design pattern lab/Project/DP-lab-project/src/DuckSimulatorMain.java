@@ -53,7 +53,7 @@ public class DuckSimulatorMain {
             else if(input == 3) {
                 System.out.println("----- Start of Task-3 -----");
                 //--------quack counter-------
-                QuackCounter patiQuackCounter = new QuackCounter(new PatiHash());
+                QuackCountable patiQuackCounter = new QuackCounter(new PatiHash());
                 patiQuackCounter.quack();
                 patiQuackCounter.quack();
                 patiQuackCounter.quack();
@@ -63,7 +63,7 @@ public class DuckSimulatorMain {
 
                 //---------quack counter-------
                 System.out.println();
-                QuackCounter duckQuackCounter = new QuackCounter(new Duck());
+                QuackCountable duckQuackCounter = new QuackCounter(new Duck());
                 duckQuackCounter.quack();
                 duckQuackCounter.quack();
 
@@ -79,8 +79,6 @@ public class DuckSimulatorMain {
                 DuckFactory duckFactory = new DuckFactory();
                 System.out.println("New duck : ");
                 QuackBehaviour duck2 = duckFactory.getFactory("patihash");
-
-
 
                 QuackCounterFactory quackCounterFactory = new QuackCounterFactory();
                 QuackCounter counter2 = (QuackCounter) quackCounterFactory.getCounterFactory("count", duck2);
@@ -128,7 +126,8 @@ public class DuckSimulatorMain {
 
                 DuckObserver duckObserver = new DuckObserver();
                 flockOfDucks.registerObserver(duckObserver);
-                flockOfDucks.notifyObservers();
+                //flockOfDucks.notifyObservers();
+                flockOfDucks.quack();
 
                 System.out.println("----- End of Task-6 -----");
                 System.out.println();

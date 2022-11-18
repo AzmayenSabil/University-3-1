@@ -1,4 +1,4 @@
-public class QuackCounter implements QuackBehaviour {
+public class QuackCounter implements QuackCountable {
 
     QuackBehaviour duck;
     QuackObserver quackObserver;
@@ -17,7 +17,7 @@ public class QuackCounter implements QuackBehaviour {
     }
 
     public void getNumberOfQuacks(){
-        System.out.println("Number of Quacks : " + numberOfQuacks);;
+        System.out.println("Number of Quacks : " + this.numberOfQuacks);;
     }
 
     @Override

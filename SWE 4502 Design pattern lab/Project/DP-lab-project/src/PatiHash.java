@@ -9,6 +9,7 @@ public class PatiHash implements QuackBehaviour {
     @Override
     public void quack() {
         System.out.println("Patihash quacking");
+        this.notifyObservers();
     }
 
     @Override
@@ -24,4 +25,5 @@ public class PatiHash implements QuackBehaviour {
     public String toString() {
         return "Patihash";
     }
+
 }

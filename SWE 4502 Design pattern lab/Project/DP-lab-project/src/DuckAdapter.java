@@ -27,4 +27,5 @@ public class DuckAdapter implements QuackBehaviour{
     public String toString() {
         return "Pretending to be a duck";
     }
+
 }
