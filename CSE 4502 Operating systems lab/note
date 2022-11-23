@@ -1,0 +1,159 @@
+// gcc task_name.c -o task_name
+// ./task_name
+
+lab-1 : 
+    pwd, ls, ls -a, cd, mkdir, rmdir, rm, touch, cp, echo, cat, vi, sudo 
+
+lab-2 : 
+    fork(), getpid(), getppid(), wait(NULL) 
+    pid == 0 --> child
+    pid > 0 --> parent
+    pid < 0 --> error 
+
+lab-3 :
+    char *args[] = {"file_name_with_path", NULL}
+    execv(args[0], args)
+
+    execl()
+    execlp()
+    execv()
+
+lab-4 :
+    touch : 
+        bool touch(const char *filename) {
+            int fd = open(filename, O_CREAT | S_IRUSR | S_IWUSR);
+            //or
+            //int fd = open(argv[1], O_WRONLY | O_CREAT, "w");
+
+            if (fd == -1) {
+                perror("Unable to touch file");
+                return false;
+            }
+
+            close(fd);
+            return true;
+        }
+    cat :
+        int fd = open(argv[1], O_RDONLY | O_CREAT, "r");
+        char *c = (char *) calloc(100, sizeof(char));
+
+        if(fd != -1){
+            int poro = read(fd, c, 100);
+            printf("%s", c);
+        }
+
+    cp :
+        int fd = open(argv[1], O_RDONLY | O_CREAT, "r");
+        char *c = (char *) calloc(100, sizeof(char));
+
+        if(fd != -1){
+            int poro = read(fd, c, 100);
+            printf("%s", c);
+        }
+
+        int fd1 = open(argv[2], O_WRONLY | O_CREAT, "rw");
+        write(fd1, c, 100);
+
+
+lab-5 :
+    using lab 3 and 4
+
+lab-6 :
+    int pipe(int pipedes[2]);
+    //pipedes[0] is for reading and pipedes[1] is for writing.
+
+    // C program to demonstrate use of fork() and pipe()
+
+    int main()
+    {
+
+        int fd1[2];
+        int fd2[2]; 
+
+        char fixed_str[] = "forgeeks.org";
+        char input_str[100];
+        pid_t p;
+
+        if (pipe(fd1) == -1) {
+            fprintf(stderr, "Pipe Failed");
+            return 1;
+        }
+        if (pipe(fd2) == -1) {
+            fprintf(stderr, "Pipe Failed");
+            return 1;
+        }
+
+        scanf("%s", input_str);
+        p = fork();
+
+        if (p < 0) {
+            fprintf(stderr, "fork Failed");
+            return 1;
+        }
+
+        // Parent process
+        else if (p > 0) {
+            char concat_str[100];
+
+            close(fd1[0]); // Close reading end of first pipe
+
+            // Write input string and close writing end of first
+            // pipe.
+            write(fd1[1], input_str, strlen(input_str) + 1);
+            close(fd1[1]);
+
+            // Wait for child to send a string
+            wait(NULL);
+
+            close(fd2[1]); // Close writing end of second pipe
+
+            // Read string from child, print it and close
+            // reading end.
+            read(fd2[0], concat_str, 100);
+            printf("Concatenated string %s\n", concat_str);
+            close(fd2[0]);
+        }
+
+        // child process
+        else {
+            close(fd1[1]); // Close writing end of first pipe
+
+            // Read a string using first pipe
+            char concat_str[100];
+            read(fd1[0], concat_str, 100);
+
+            // Concatenate a fixed string with it
+            int k = strlen(concat_str);
+            int i;
+            for (i = 0; i < strlen(fixed_str); i++)
+                concat_str[k++] = fixed_str[i];
+
+            concat_str[k] = '\0'; // string ends with '\0'
+
+            // Close both reading ends
+            close(fd1[0]);
+            close(fd2[0]);
+
+            // Write concatenated string and close writing end
+            write(fd2[1], concat_str, strlen(concat_str) + 1);
+            close(fd2[1]);
+
+            exit(0);
+        }
+    }
+
+
+lab-7 :
+    //shared memory IPC
+    key_t key = 1022;
+  
+    // shmget returns an identifier in shmid
+    int shmid = shmget(key,sizeof(int)*n,0666|IPC_CREAT);
+        
+    int *a = (int*)shmat(shmid,NULL,0);
+
+    shmdt(a);
+
+
+lab-8 :
+    //threads 
